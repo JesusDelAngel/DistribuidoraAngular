@@ -1,0 +1,165 @@
+@use '../../../scss/variables' as v;
+@use '../../../scss/mixins' as m;
+@use 'sass:color';
+
+.login-auth-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+        font-weight: v.$bold;
+        color: v.$grisOscuro;
+    }
+
+    .login-register-wrapper {
+        background-color: v.$blanco;
+
+        @include m.tablet {
+            width: 40vw;
+
+        }
+
+        height: 97vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2rem 3rem rgba(0, 0, 0, .9);
+        padding: 2rem 1rem;
+        border-radius: 2rem;
+
+        // .form-group {
+        //     display: flex;
+        //     flex-direction: column;
+        //     width: 60vw;
+        //     width: 100%;
+        // }
+        .option-register {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+
+            @include m.tablet {
+                gap: 3rem;
+            }
+
+            p {
+                padding: 1rem;
+                font-size: 1.8rem;
+            }
+
+        }
+
+    }
+
+    .register-auth-form {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        width: 90%;
+        height: 90%;
+        margin-bottom: 1rem;
+
+        input {
+            border: solid 1px #e7e7e7;
+            border-radius: 1rem;
+            height: 30px;
+            width: 100%;
+            padding: .25rem .5rem;
+            font-size: 100%;
+            margin-bottom: 1.5rem;
+
+
+            .ng-invalid .ng-touched {
+                border: solid 2px red !important;
+            }
+        }
+
+        label {
+            padding-bottom: .35rem;
+            display: inline-block;
+            margin-bottom: .40rem;
+        }
+
+        .content-button {
+            display: flex;
+            justify-content: center;
+        }
+
+        .btn-register {
+            background-color: v.$morado;
+            border-radius: .5rem;
+            padding: .8rem;
+            width: 80%;
+            color: v.$blanco;
+            font-size: v.$tamaño_texto_pequeño;
+            font-weight: bold;
+            margin-top: 1rem;
+
+
+            &:hover {
+                background-color: color.adjust(v.$morado, $lightness: 10%);
+                cursor: pointer;
+            }
+        }
+input {
+  &.ng-touched {
+    &.ng-invalid {
+      border: 1px solid red;
+    }
+  }}
+    }
+
+
+    .login-auth-page .separator {
+        width: 90%;
+        margin: 2rem 0;
+        border-bottom: solid 2px v.$negro;
+        opacity: .2;
+    }
+
+
+    .login-social-zone {
+        display: flex;
+
+        @include m.tablet {
+            flex-direction: row;
+        }
+
+        flex-direction: column;
+        gap: .75rem;
+        width: 90%;
+    }
+
+    .social-btn {
+        border: 0;
+        padding: .5rem 2rem;
+        width: 100%;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+        box-shadow: 4px 4px 10px gray;
+        // border: solid .1px v.$negro;
+        background-color: v.$gris;
+        font-weight: 600;
+        margin-bottom: 2rem;
+    }
+
+    .login-social-zone .social-btn.btn-fb {
+        background-color: #3A61B3;
+        color: v.$blanco;
+
+    }
+
+    .login-auth-page .login-social-zone .social-btn.btn-apple {
+        background-color: #1a1a1a;
+        color: var(--color-4);
+    }
+
+
+
+
+}

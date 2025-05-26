@@ -1,0 +1,29 @@
+@use '../../../scss/variables' as v;
+@use '../../../scss/mixins' as m;
+@use 'sass:color';
+
+div {
+    // width: 100vw; // Ancho completo de la pantalla
+    // height: auto;
+    // height: 300vh; // Alto completo de la pantalla
+    background: linear-gradient(135deg, #230440, #ee0979);
+    display: block; // 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    // margin: 3rem;
+
+    // background-color: #3498db; // Color de fondo, cámbialo si lo deseas
+    // background: radial-gradient(circle, purple 0%, purple 30%, rgb(106, 7, 149)80%);
+
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+}
