@@ -1,0 +1,12 @@
+@use '../../../scss/mixins' as m;
+
+.principal-page-content {
+    background: linear-gradient(135deg, #230440, #ee0979);
+
+    top: 0;
+    left: 0;
+    // width: 100vw;
+    width: auto;
+    height: auto;
+    padding: 5rem;
+}
