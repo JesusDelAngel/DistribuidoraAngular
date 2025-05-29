@@ -1,0 +1,33 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+
+.button-details-section {
+    border: none;
+    border-radius: 2rem;
+    padding: 2rem;
+    width: 90%;
+    color: v.$gris;
+    background-color: v.$coffe;
+    margin-top: 1rem;
+    font-weight: v.$black;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    &:hover {
+        cursor: pointer;
+        
+      transform: scale(1.1); /* Hace el botón un 10% más grande */
+        background-color: v.$late;
+        //   color.adjust(v.$morado, $lightness: 10%);
+    }
+    
+}
+$verde: #71B100;
+$morado: #A50BC1;
+$slate: #626D71;
+$ceramic: #CDCDC0;
+$late: #DDBC95;
+$coffe: #B38867;
+$blanco: #FFFFFF;
+$gris: #e1e1e1;
+$grisOscuro: #333333;

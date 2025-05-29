@@ -1,8 +1,13 @@
 @use '../../../scss/variables' as v;
 @use 'sass:color';
 @use '../../../scss/mixins' as m;
+
+.category-title{
+    color: v.$gris;
+    font-weight: v.$bold
+}
 .content-products{
-    @include m.grid(3, 1rem);
+    @include m.grid(4, 1rem);
     width: 100%;
 }
 .box-product-category{
@@ -21,19 +26,24 @@
     margin: 2rem;
 
     h1{
-        font-weight: v.$bold;
-        color: v.$verde;
+        font-weight: v.$regular;
+        color: v.$late;
         padding: 1rem;
         margin: 0;
+        font-size: v.$tamaño_texto_subtitulo;
     }
 
     .product-category-description{
-        text-align: justify;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
     img{
         width:45%;
         height: auto;
+    }
+    .button-details{
+        width: 100%;
     }
 
 }
