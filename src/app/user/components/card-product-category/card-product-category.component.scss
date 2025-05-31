@@ -4,14 +4,16 @@
 
 .category-title{
     color: v.$gris;
-    font-weight: v.$bold
+    font-weight: v.$bold;
+    margin: 0;
+    margin-top: 3rem;
 }
 @include m.tablet{
 
     .content-products{
         @include m.grid(2, 1rem);
         width: 100%;
-        margin: 0
+         padding: 3rem;
     }
 }
 @include m.desktopXL{
@@ -19,6 +21,7 @@
     .content-products{
         @include m.grid(4, 1rem);
         width: 100%;
+        padding: 3rem;
     }
 }
 .box-product-category{
@@ -35,7 +38,8 @@
     // justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 1rem;
+    // margin: 1rem;
+    gap: 1rem;
     @include m.desktopXL{
         margin: 2rem;
     }
