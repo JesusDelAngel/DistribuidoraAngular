@@ -6,11 +6,23 @@
     color: v.$gris;
     font-weight: v.$bold
 }
-.content-products{
-    @include m.grid(4, 1rem);
-    width: 100%;
+@include m.tablet{
+
+    .content-products{
+        @include m.grid(2, 1rem);
+        width: 100%;
+        margin: 0
+    }
+}
+@include m.desktopXL{
+
+    .content-products{
+        @include m.grid(4, 1rem);
+        width: 100%;
+    }
 }
 .box-product-category{
+    position: relative;
      box-shadow: 0 2rem 3rem rgba(113, 34, 112, 0.9);
     background-color: color.adjust(v.$gris, $lightness: 5%);
     border-radius: 3rem;
@@ -23,7 +35,10 @@
     // justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 2rem;
+    margin: 1rem;
+    @include m.desktopXL{
+        margin: 2rem;
+    }
 
     h1{
         font-weight: v.$regular;
@@ -36,6 +51,7 @@
     .product-category-description{
         text-align: center;
         margin-bottom: 2rem;
+        font-size: 1.7rem;
     }
 
     img{
@@ -43,6 +59,8 @@
         height: auto;
     }
     .button-details{
+        position: absolute;
+        bottom: 3rem;
         width: 100%;
     }
 
