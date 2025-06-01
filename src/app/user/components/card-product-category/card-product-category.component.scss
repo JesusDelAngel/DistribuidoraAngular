@@ -1,12 +1,44 @@
 @use '../../../scss/variables' as v;
 @use 'sass:color';
 @use '../../../scss/mixins' as m;
+.container {
+    // max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem; // Para que tenga algo de espacio lateral en pantallas pequeñas
+}
 
+
+.distribuidora-description{
+    color: v.$gris;
+    padding: 4rem;
+    h1{
+        color: v.$coffe;
+    }
+
+}
+.servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: v.$gris;
+    .service-box{
+        text-align: center;
+        margin: 3rem;
+        p{
+            color: v.$gris;
+        }
+        i{
+            font-size: 5rem;
+        }
+    }
+}
+// 
+// Categorias
 .category-title{
     color: v.$gris;
     font-weight: v.$bold;
     margin: 0;
-    margin-top: 3rem;
+    // margin-top: 3rem;
 }
 @include m.tablet{
 
@@ -38,7 +70,7 @@
     // justify-content: center;
     align-items: center;
     text-align: center;
-    // margin: 1rem;
+    margin: 1rem;
     gap: 1rem;
     @include m.desktopXL{
         margin: 2rem;
@@ -69,3 +101,4 @@
     }
 
 }
+

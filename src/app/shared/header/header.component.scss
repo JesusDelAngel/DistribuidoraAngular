@@ -1,26 +1,116 @@
-.header{
-    padding: 2rem;
-    color: antiquewhite;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: space-between;
-    background-color: black;
-    width: auto;
-    height: 15rem;
-    .title-header{
-        font-weight: bold;
-        span{
-            font-weight: 100;
+@use '../../scss/variables' as v;
+@use '../../scss/mixins' as m;
+@use 'sass:color';
+
+// .no-webp .inicio {
+//     background-image: url(../../../img/header.jpg);
+// }
+
+// .webp .inicio {
+//     background-image: url(../../../img/colortech.webp);
+// }
+
+.inicio {
+  background-image: url(../../../assets/img/header.jpg); // fallback
+}
+
+@supports (background-image: image-set(url("image.webp") type("image/webp"))) {
+  .inicio {
+    background-image: image-set(
+      url("../../../assets/img/header.jpg") type("image/jpeg")
+    );
+  }
+}
+.header {
+    position: relative;
+    background-color: v.$gris;
+    padding: 1rem 0 0rem 0;
+
+    &.inicio {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+
+        @include m.tablet {
+            min-height: 60rem;
+        }
+
+        .contenido-header {
+            @include m.tablet {
+                min-height: 60rem;
+            }
         }
     }
+}
+
+.overlay {
+    position: absolute;
+    background: linear-gradient(280deg,
+            rgba(v.$gris, 0.2),
+            rgba(color.adjust(v.$gris, $lightness: -90%), 0.9)
+            /* rgba(color.adjust(v.$morado, $lightness: -20%)90%) 
+      /*  rgba( darken( v.$morado , 20% ), 90% )  */
+        );
+    inset: 0;
+
+    display: flex;
+    align-items: center;
 
 }
 
-.menu-header a{
-    color: azure;
-    padding-right: 1.6rem;
-    i{
-        padding-right: .8rem;
+.contenido-header {
+    position: relative;
+    // z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .barra {
+        @include m.tablet{
+            
+        }
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+        }
+        .title-header {
+            font-weight: bold;
+            color: v.$late;
+
+            span {
+                font-weight: 100;
+            }
+        }
+    }
+
+    .menu-header a{
+        color: v.$blanco;
+        padding-right: 1.6rem;
+        display: block;
+        text-align: center;
+
+        @include m.tablet{
+            display: inline-block;
+        }
+
+        i {
+            padding-right: .8rem;
+        }
+    }
+}
+.slogan-header{
+    color: v.$coffe;
+    font-weight: v.$bold;
+    font-size: v.$tamaño_texto_normal;
+    @include m.tablet{
+        display: flex;
+        text-align: left;
+        padding-bottom: 3rem;
+        font-size: v.$tamaño_texto_grande;
     }
 }

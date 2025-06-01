@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from "../button/button.component";
 import { HeaderComponent } from "../../../shared/header/header.component";
+import { FooterComponent } from "../../../shared/footer/footer.component";
 
 @Component({
   selector: 'app-card-product-category',
-  imports: [ButtonComponent, HeaderComponent],
+  imports: [ButtonComponent],
   templateUrl: './card-product-category.component.html',
   styleUrl: './card-product-category.component.scss'
 })

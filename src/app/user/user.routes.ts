@@ -24,11 +24,11 @@ export const userRoutes: Routes = [
             //     path: 'hidracolor',
             //     // loadComponent: () => import('./components/form-register/form-register.component').then(m => m.FormRegisterComponent)
             // }
-            // ,
-            // {
-            //     path: 'shampoo',
-            //     // loadComponent: () => import('./components/form-register/form-register.component').then(m => m.FormRegisterComponent)
-            // },
+             ,
+            {
+                path: 'shampoo',
+                loadComponent: () => import('../login/pages/login-page/login-page.component').then(m => m.LoginPageComponent)
+            }
            , {
                 path: '**',
                 redirectTo: 'product-category'
