@@ -5,12 +5,13 @@
                     <h1 class="title-footer">Distribuidora <span>Lizz</span></h1>
                 </a>
     
-                <nav class="menu-footer">
-                    <a href="/"><i class="fa-solid fa-house"></i>Inicio</a>
-                    <a href="/shampoo"><i class="fa-solid fa-list-ul"></i>servicios</a>
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i>Mi carrito</a>
-                    <a href=""><i class="fa-solid fa-circle-user"></i>Perfil</a>
-                </nav>
+             <nav class="menu-footer">
+                <a href="/"><i class="fa-solid fa-house"></i>Inicio</a>
+                <a [routerLink]="['servicios']"><i class="fa-solid fa-list-ul"></i>servicios</a>
+                <a [routerLink]="['carrito-compras']"><i class="fa-solid fa-cart-shopping"></i>Mi carrito</a>
+                <a [routerLink]="['perfil']"><i class="fa-solid fa-circle-user"></i>Perfil</a>
+            </nav>
+
     
             </div><!-- .barra -->
         </div>
