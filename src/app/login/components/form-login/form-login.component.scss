@@ -58,7 +58,7 @@
     justify-content: flex-start;
     flex-direction: column;
     width: 90%;
-    height: 90%;
+    height: 50%;
     margin-bottom: 1rem;
 
     input {
@@ -120,35 +120,35 @@ input {
 }
 
 
-.login-social-zone {
-    display: flex;
-    flex-direction: column;
-    // gap: .75rem;
-    width: 90%;
-}
+// .login-social-zone {
+//     display: flex;
+//     flex-direction: column;
+//     // gap: .75rem;
+//     width: 90%;
+// }
 
-.social-btn {
-    border: 0;
-    padding: .5rem 2rem;
-    width: 100%;
-    font-size: v.$tamaño_texto_pequeño;
-    border-radius: 1rem;
-    box-shadow: 4px 4px 10px gray;
-    // border: solid .1px v.$negro;
-    background-color: v.$gris;
-    font-weight: 600;
-    margin-bottom: 2rem;
-}
+// .social-btn {
+//     border: 0;
+//     padding: .5rem 2rem;
+//     width: 100%;
+//     font-size: v.$tamaño_texto_pequeño;
+//     border-radius: 1rem;
+//     box-shadow: 4px 4px 10px gray;
+//     // border: solid .1px v.$negro;
+//     background-color: v.$gris;
+//     font-weight: 600;
+//     margin-bottom: 2rem;
+// }
 
-.login-social-zone .social-btn.btn-fb {
-    background-color: #3A61B3;
-    color: v.$blanco;
+// .login-social-zone .social-btn.btn-fb {
+//     background-color: #3A61B3;
+//     color: v.$blanco;
 
-}
+// }
 
-.login-auth-page .login-social-zone .social-btn.btn-apple {
-    background-color: #1a1a1a;
-    color: var(--color-4);
-}
+// .login-auth-page .login-social-zone .social-btn.btn-apple {
+//     background-color: #1a1a1a;
+//     color: var(--color-4);
+// }
 
 

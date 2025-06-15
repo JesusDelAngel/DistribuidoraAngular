@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
-//   base_url:'https://admin-pro-hospital-backend-production.up.railway.app/'
+  production: true, 
+  base_url:'http://localhost:3001/api/1.0'
 };
