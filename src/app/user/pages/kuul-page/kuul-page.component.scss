@@ -1,0 +1,25 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+
+.kuulContainer {
+    margin: 2rem;
+
+    // cortar a otro componente separado
+    h1 {
+        color: v.$blanco;
+        font-weight: v.$bold;
+        margin: 0;
+    }
+
+    .kuulDescription {
+        color: v.$ceramic;
+        margin: 2rem;
+        text-align: center;
+
+        @include m.tablet {
+            font-size: v.$tamaño_texto_subtitulo;
+        }
+    }
+
+}
