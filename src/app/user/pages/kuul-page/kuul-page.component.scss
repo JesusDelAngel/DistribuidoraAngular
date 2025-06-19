@@ -4,6 +4,13 @@
 
 .kuulContainer {
     margin: 2rem;
+    display: grid;
+    // align-items: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
 
     // cortar a otro componente separado
     h1 {
@@ -21,5 +28,21 @@
             font-size: v.$tamaño_texto_subtitulo;
         }
     }
+    
+    .productList {
+      display: flex;
+      flex-wrap: wrap; /* si quieres que se acomoden en varias líneas */
+      justify-content: center; /* centra horizontalmente */
+      gap: 16px; /* espacio entre componentes, opcional */
+    }
 
 }
+
+    .scroll-container {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding: 1rem;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;//   oculta la barra de scroll
+    }
