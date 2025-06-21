@@ -1,0 +1,16 @@
+@use '../../../app/scss/variables' as v;
+@use 'sass:color';
+@use '../../../app/scss/mixins' as m;
+
+.button {
+    background: none;
+    border: none;
+    font-size: v.$tamaño_texto_subtitulo;
+    color: v.$late;
+    &:hover {
+        cursor: pointer;
+    
+        transform: scale(1.1);
+        /* Hace el botón un 10% más grande */
+    }
+}

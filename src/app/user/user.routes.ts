@@ -9,14 +9,20 @@ export const userRoutes: Routes = [
         children: [
             {
                 path: '', // cuando entras a /productos
-                loadComponent: () => import('./pages/page-principal-products/page-principal-products.component')
-                    .then(m => m.PagePrincipalProductsComponent),
+                loadComponent: () => import('./pages/page-principal-products/page-principal-products.component').then(m => m.PagePrincipalProductsComponent),
                 children: [{
                     path: '',
                     loadComponent: () => import('./components/card-product-category/card-product-category.component').then(m => m.CardProductCategoryComponent)
                 }, {
                     path: 'kuul',
                     loadComponent: () => import('./pages/kuul-page/kuul-page.component').then(m => m.KuulPageComponent)
+                    // ,children:[
+                    //     {
+                    //         path: 'coloracionFantasia',
+                    // loadComponent: () => import('./pages/kuul-page/kuul-page.component').then(m => m.KuulPageComponent)
+                    
+                    //     }
+                    // ]
                 },
                 {
                     path: 'hidracolor',

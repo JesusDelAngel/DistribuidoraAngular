@@ -12,7 +12,19 @@
     text-align: center;
     overflow: hidden;
 
-    // cortar a otro componente separado
+    .categoryDescriptionButton{
+        
+        display: flex;
+        flex-direction: column;
+        
+        @include m.tablet{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 5rem;
+        }
+    }
     h1 {
         color: v.$blanco;
         font-weight: v.$bold;
