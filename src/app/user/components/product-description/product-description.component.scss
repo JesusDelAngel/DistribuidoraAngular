@@ -1,42 +1,64 @@
 @use '../../../scss/variables' as v;
 @use 'sass:color';
 @use '../../../scss/mixins' as m;
-.card-product{
-    width: 50rem;
-    height: 50rem;
+
+.card-product {
+    width: 25rem;
+    height: 40rem;
     background: linear-gradient(135deg, v.$ceramic, v.$morado);
     border-radius: 2rem;
     overflow: hidden;
     margin: 1rem;
 
-    .imgProduct{
+    .imgProduct {
         display: flex;
         justify-content: center;
-        align-items: center;   
+        align-items: center;
         width: 100%;
-        height: 50%;
+        padding-top: 5rem;
+        // height: 50%;
     }
-    .imgProduct img {
-    max-width: 70%;
-    // height: auto;
-}
 
-    .info-product{
+    .imgProduct img {
+        max-width: 70%;
+        // height: auto;
+    }
+
+    .divider {
+
+        border: none;
+        height: 1px;
+        background-color: v.$ceramic;
+        width: 80%;
+        margin-bottom: 0;
+        // margin: 0;
+        /* Puedes cambiar el color */
+        // margin: 10px 0;
+        /* Espaciado vertical */
+    }
+
+    .info-product {
         display: flex;
         flex-direction: column;
-        padding: 3rem;
+        padding: 2rem;
         text-align: start;
+        line-height: 3rem;
+        padding-top: 5rem;
+        overflow: hidden;
 
-        h3{
+
+
+        h3 {
             text-align: start;
             font-weight: v.$bold;
             margin: 0;
         }
 
-        p{
+        p {
             color: v.$ceramic;
         }
-        .precio-product{
+
+        .precio-product {
             color: black;
         }
     }

@@ -1,0 +1,93 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+
+
+// Cortar a un componente separado 
+.categoryDescriptionButton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  /* Una columna de 1fr y otra de 2fr */
+  gap: 10px;
+  /* Espacio entre columnas (opcional) */
+  // height: 100vh;
+  /* Altura total de la ventana (opcional) */
+}
+
+.item1 {
+    // background-color: #b3d4fc;
+  // width: 30rem;
+  // height: 40rem;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  justify-content: center;
+  img {
+    width: 30rem;
+    // height: 40;
+  }
+}
+
+.item2 {
+  //   background-color: #addbad;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .title{
+    color: aqua;
+    font-weight: bold;
+  }
+  .description{
+    color: v.$blanco;
+    padding: 4rem;
+  }
+}
+
+
+// ===========================================================
+
+.gridProducts {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: 1rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; //   oculta la barra de scroll
+
+  .item2
+  h2
+  .title{
+    color: aqua;
+    color: v.$morado;
+  }
+
+  // @include m.grid(2, 1fr);
+
+  @include m.tablet {
+
+    display: grid;
+    overflow: hidden;
+    padding: 2rem;
+    justify-content: center;
+    @include m.grid(3, 1fr)
+  }
+
+  @include m.desktopXL {
+
+    display: grid;
+    overflow: hidden;
+    padding: 2rem;
+    justify-content: center;
+    @include m.grid(5, 1fr)
+  }
+}
