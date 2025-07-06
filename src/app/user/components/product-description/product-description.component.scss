@@ -7,21 +7,30 @@
     height: 40rem;
     background: linear-gradient(135deg, v.$ceramic, v.$morado);
     border-radius: 2rem;
-    overflow: hidden;
+    overflow: visible;
     margin: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .imgProduct {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        padding-top: 5rem;
+        padding-top: 3rem;
         // height: 50%;
     }
 
     .imgProduct img {
-        max-width: 70%;
-        // height: auto;
+        width: 60%;
+        height: auto;
+        max-height: 100%;
+        object-fit: cover;
+        /* o contain */
+        // max-width: 70%;
+        // // height: auto;
     }
 
     .divider {
@@ -43,8 +52,9 @@
         padding: 2rem;
         text-align: start;
         line-height: 3rem;
-        padding-top: 5rem;
         overflow: hidden;
+        justify-content: center;
+        bottom: 1rem;
 
 
 
@@ -62,4 +72,10 @@
             color: black;
         }
     }
+}
+
+.card-product * {
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
 }
