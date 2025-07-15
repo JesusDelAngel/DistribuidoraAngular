@@ -1,0 +1,20 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+
+
+.content-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// @include m.desktopXL{
+
+//     .content-products{
+//         @include m.grid(4, 1rem);
+//         width: 100%;
+//         padding: 3rem;
+//     }
+// }

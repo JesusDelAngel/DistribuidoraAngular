@@ -1,0 +1,27 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+.distribuidora-description{
+    color: v.$gris;
+    padding: 4rem;
+    h1{
+        color: v.$coffe;
+    }
+
+}
+.servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: v.$gris;
+    .service-box{
+        text-align: center;
+        margin: 3rem;
+        p{
+            color: v.$gris;
+        }
+        i{
+            font-size: 5rem;
+        }
+    }
+}

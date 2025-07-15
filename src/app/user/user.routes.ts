@@ -14,7 +14,7 @@ export const userRoutes: Routes = [
                 children: [
                     {
                         path: '',
-                        loadComponent: () => import('./components/card-product-category/card-product-category.component').then(m => m.CardProductCategoryComponent)
+                        loadComponent: () => import('./pages/home-page/home-page.component').then(m => m.HomePageComponent)
                     },
                     {
                         path: 'kuul',
@@ -44,15 +44,15 @@ export const userRoutes: Routes = [
                         ]
                     },
                     {
-                        path: 'hidracolor',
+                        path: 'Hidracolor',
                         loadComponent: () => import('./pages/hidracolor-page/hidracolor-page.component').then(m => m.HidracolorPageComponent)
                     },
                     {
-                        path: 'colortech',
+                        path: 'Colortech',
                         loadComponent: () => import('./pages/colortech-page/colortech-page.component').then(m => m.ColortechPageComponent)
                     },
                     {
-                        path: 'shampoo',
+                        path: 'Mas Procuctos',
                         loadComponent: () => import('./pages/shampoo-page/shampoo-page.component').then(m => m.ShampooPageComponent)
                     }]
             },

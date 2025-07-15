@@ -1,16 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { product } from '../../interfaces/productInterface.js';
 
-export interface product{
-    brandProduct: string;
-    nameProduct : string;
-    descriptionProduct: string;
-    availableParts: number;
-    price: number;
-    img: string;
-    numerology: number;
-}
 
 @Injectable({
   providedIn: 'root'
@@ -23,3 +15,4 @@ export class ProductsServiceService {
     return this.http.get<product[]>(this.apiUrl);
   }
 }
+

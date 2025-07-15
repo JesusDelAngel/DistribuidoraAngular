@@ -1,6 +1,7 @@
 import { Component, Input, input } from '@angular/core';
-import { product } from '../../../services/user/products-service.service';
 import { CommonModule } from '@angular/common';
+import { ImgBrokenDirective } from '../../../shared/directives/img-broken.directive';
+import { product } from '../../../interfaces/productInterface';
 
 @Component({
   selector: 'app-product-description',

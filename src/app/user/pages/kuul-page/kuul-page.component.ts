@@ -3,8 +3,9 @@ import { ProductDescriptionComponent } from "../../components/product-descriptio
 import { TitleDescriptionComponent } from "../../../shared/title-description/title-description.component";
 import { ButtonComponent } from "../../../shared/button/button.component";
 import { RouterLink } from '@angular/router';
-import { product, ProductsServiceService } from '../../../services/user/products-service.service';
+import { ProductsServiceService } from '../../../services/user/products-service.service';
 import { CommonModule } from '@angular/common';
+import { product } from '../../../interfaces/productInterface';
 
 @Component({
   selector: 'app-kuul-page',
