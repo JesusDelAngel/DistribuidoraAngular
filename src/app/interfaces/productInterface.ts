@@ -5,5 +5,5 @@ export interface product{
     availableParts: number;
     price: number;
     img: string;
-    numerology: number;
+    numerology?: number;
 }

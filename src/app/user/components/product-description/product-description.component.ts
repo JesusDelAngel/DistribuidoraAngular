@@ -12,6 +12,7 @@ import { product } from '../../../interfaces/productInterface';
 })
 export class ProductDescriptionComponent {
 @Input() productos: product[] = [];
+// @Input() productosFantasia: product[] =[];
 
 getImageUrl(img: string): string {
   return `http://localhost:3000/uploads/${img}`;

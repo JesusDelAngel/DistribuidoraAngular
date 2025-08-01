@@ -12,7 +12,14 @@ export class ProductsServiceService {
   constructor(private http: HttpClient) { }
 
   obtenerProductos(): Observable<product[]>{
-    return this.http.get<product[]>(this.apiUrl);
+    return this.http.get<product[]>(this.apiUrl + '/permanentes');
+  }
+
+  //
+  obtenerProductosFantasia():Observable<product[]>{
+    return this.http.get<product[]>(this.apiUrl + '/fantasia');
   }
 }
+
+
 

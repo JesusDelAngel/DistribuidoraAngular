@@ -14,18 +14,19 @@ import { product } from '../../../interfaces/productInterface';
   styleUrl: './kuul-page.component.scss'
 })
 export class KuulPageComponent implements OnInit {
-   productos: product[] = []
-    constructor(private productoService: ProductsServiceService) { }
-  
-    ngOnInit(): void {
-      this.productoService.obtenerProductos().subscribe((data: any) => {
-          console.log('Productos:', data); // <--- esto
-    this.productos = data;
-  });
-      // .subscribe(data => {
-      //   this.productos = data;
-      //   console.log(data)
-      // });
-  
-    }
+  productos: product[] = []
+  productosFantasia: product[] = []
+  constructor(private productoService: ProductsServiceService) { }
+
+  ngOnInit(): void {
+    this.productoService.obtenerProductos().subscribe((data: any) => {
+      console.log('Productos:', data); // <--- esto
+      this.productos = data;
+    });
+
+    this.productoService.obtenerProductosFantasia().subscribe((data: product[]) => {
+      console.log('Productos Fantasia:', data);
+      this.productosFantasia = data;
+    });
+  }
 }

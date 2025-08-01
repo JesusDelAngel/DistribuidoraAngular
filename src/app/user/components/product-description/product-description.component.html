@@ -1,20 +1,26 @@
-<div  *ngFor ="let producto of productos" class="card-product">
-    
-    <div class="imgProduct">
-        <img src= "http://localhost:3000/{{producto.img}}" [alt]="producto.img"/>
-        <!-- <img [src] = "producto.img"
-        <img [src]=getImageUrl(producto.img) alt="">
-            [alt]="producto.nameProduct"> -->
-    </div>
-    
-    <hr class="divider">
+<div class="product-row">
 
-    <div class="info-product">
-        <h3 class="title-product">{{producto.nameProduct}}</h3>
-        <p class="number-product">{{producto.numerology}}</p>
-        <p class="description-product">{{producto.descriptionProduct}}</p>
-        <p class="stock-product">Disponibles: {{producto.availableParts}}</p>
-        <p class="precio-product">${{producto.price}}</p>
-    </div><!-- info-product -->
-    
+    <div *ngFor="let producto of productos" class="card-product">
+
+        <div class="imgProduct">
+            <img src="http://localhost:3000/{{producto.img}}" [alt]="producto.img" />
+            <!-- <img [src] = "producto.img"
+        <img [src]=getImageUrl(producto.img) alt="">
+        [alt]="producto.nameProduct"> -->
+        </div>
+
+        <hr class="divider">
+
+        <div class="info-product">
+            <h3 class="title-product">{{producto.nameProduct}}</h3>
+            <p class="number-product" *ngIf="producto.numerology">
+                {{ producto.numerology }}
+            </p>
+            <!-- <p class="number-product">{{producto.numerology}}</p> -->
+            <p class="description-product">{{producto.descriptionProduct}}</p>
+            <p class="stock-product">Disponibles: {{producto.availableParts}}</p>
+            <p class="precio-product">${{producto.price}}</p>
+        </div><!-- info-product -->
+
+    </div>
 </div>

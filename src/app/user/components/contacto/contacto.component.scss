@@ -1,0 +1,63 @@
+@use '../../../scss/variables' as v;
+@use 'sass:color';
+@use '../../../scss/mixins' as m;
+
+
+.mapa {
+    background-color: v.$ceramic;
+}
+
+.contacto {
+    display: block;
+    background:  v.$blanco;
+    color: v.$late;
+
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // background-color:black;
+
+    // i{
+    //     color: v.$late;
+    // }
+    .datos-contacto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 9rem;
+
+        @include m.tablet {
+
+        }
+    }
+
+    .datos-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+        padding-bottom: 3rem;
+
+        i {
+            font-size: 5rem;
+        }
+
+        .datos-ubicacion {
+            h3 {
+                margin: 0;
+                font-weight: v.$bold;
+            }
+        }
+    }
+}
+
+.title-ubicacion {
+    font-size: v.$tamaño_texto_normal;
+    color: v.$late;
+    font-weight: bold;
+}

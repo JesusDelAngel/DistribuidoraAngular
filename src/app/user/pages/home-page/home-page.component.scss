@@ -3,18 +3,54 @@
 @use '../../../scss/mixins' as m;
 
 
-.content-products{
+.content-products {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-// @include m.desktopXL{
+.espaciado {
+    margin-top: 8rem;
+}
 
-//     .content-products{
-//         @include m.grid(4, 1rem);
-//         width: 100%;
-//         padding: 3rem;
-//     }
-// }
+.pading-top{
+    padding-top: 7rem;
+}
+.imagen-contacto {
+    position: relative;
+    background-image: url('../../../../assets/img/pelo-teñidoAnuncio.jpg');
+    height: 50rem;
+    background-position: center 10%;
+    background-size: cover;
+    padding: v.$separacion 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5); // puedes ajustar la opacidad
+        z-index: 1;
+    }
+
+
+    h2, p {
+        position: relative;
+        z-index: 2;
+        font-size: 4rem;
+        font-weight: v.$black;
+        color: v.$blanco;
+    }
+
+    p {
+        font-size: 1.8rem;
+        // color: v.$blanco;
+    }
+}
