@@ -1,0 +1,169 @@
+@use '../../../scss/mixins' as m;
+@use '../../../scss/variables' as v;
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        color: v.$coffe;
+    }
+}
+
+
+.servicio-description {
+    position: relative;
+    width: 100vw; // Asegura que ocupe TODO el ancho del viewport
+    min-height: 80vh;
+    // background-image: url('../../../../assets/img/uñasFondo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position: center center;
+    background-size: cover;
+    padding: v.$separacion 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.8); // puedes ajustar la opacidad
+        z-index: 1;
+    }
+
+    h1,
+    p {
+        position: relative;
+        top: -5rem;
+        z-index: 2;
+    }
+
+    .title-service {
+        line-height: 8rem;
+        font-size: 8rem;
+        font-weight: bold;
+        color: v.$blanco;
+    }
+
+    p {
+        color: v.$late;
+    }
+
+    .button-details-section {
+        position: relative;
+        z-index: 2;
+        border: none;
+        border-radius: 2rem;
+        padding: 2rem;
+        max-width: 50rem;
+        width: 80%;
+        font-size: 2rem;
+        color: v.$blanco;
+        background-color: v.$coffe;
+        margin-top: 1rem;
+        font-weight: v.$black;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            cursor: pointer;
+
+            transform: scale(1.1);
+            /* Hace el botón un 10% más grande */
+            background-color: v.$late;
+            //   color.adjust(v.$morado, $lightness: 10%);
+        }
+
+    }
+
+
+}
+
+
+
+// Descripcion del servicio e imagen 
+
+
+.descripcion-servicio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem;
+    @include m.desktop{
+        @include m.grid(2, 2rem);
+        padding: 16rem 10rem;
+        
+    }
+
+    img {
+        border-radius: 2rem;
+        width: 40vw;
+        height: 70vh;
+        box-sizing: border-box;
+    }
+
+    .texto-descripcion p {
+        font-size: 3rem;
+        color: v.$blanco ;
+    }
+}
+
+.fondo-uñas {
+    background-image: url('../../../../assets/img/uñasFondo.jpg');
+}
+
+.fondo-alasiado {
+    background-image: url('../../../../assets/img/alisado.jpg');
+}
+
+
+//CSS Carrusel
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 40rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-image img {
+
+    width: 40rem;
+    height: 50rem;
+    display: block;
+    border-radius: 20px;
+}
+
+.nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav.prev {
+    left: 10px;
+}
+
+.nav.next {
+    right: 10px;
+}
+
+.nav:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}

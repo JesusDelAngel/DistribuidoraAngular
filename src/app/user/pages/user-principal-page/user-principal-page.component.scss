@@ -1,7 +1,12 @@
 @use '../../../scss/mixins' as m;
 @use '../../../scss/variables' as V;
-
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 .principal-page-content {
+    flex: 1;
     background: linear-gradient(135deg, #230440, #ee0979);
 
     top: 0;

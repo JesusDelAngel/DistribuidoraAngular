@@ -1,1 +1,84 @@
-<p>user-services-page works!</p>
+<main class="center">
+
+    <section id="uñas">
+        <div class="servicio-description fondo-uñas">
+            <h1>NUESTROS SERVICIOS</h1>
+
+            <h1 class="title-service">Aplicacion de uñas</h1>
+
+            <p>En <span>Distribuidora Lizz</span>, transformamos el cuidado de tus uñas en una experiencia de
+                belleza y bienestar.</p>
+
+            <button class="button-details-section">Agendar una cita</button>
+
+        </div>
+
+
+
+        <div class="descripcion-servicio">
+            <!-- <img src="assets/img/estacion.jpg" alt="Imagen de prueba"> -->
+            <div class="carousel-container">
+                <button class="nav prev" (click)="cambiarImagen('uñas', 'anterior')">&#10094;</button>
+
+                <div class="carousel-image">
+                    <img [src]="images[indexU]" alt="Imagen del carrusel de uñas">
+                </div>
+
+                <button class="nav next" (click)="cambiarImagen('uñas', 'siguiente')">&#10095;</button>
+            </div>
+
+            <div class="texto-descripcion">
+                <p>Embellece tus manos con nuestro servicio profesional de aplicación de uñas. Utilizamos productos de
+                    alta calidad
+                    y técnicas precisas para garantizar un acabado duradero, elegante y completamente personalizado. Ya
+                    sea que prefieras
+                    un estilo clásico, natural o diseños más creativo, estas lista para transformar tus uñas en
+                    una verdadera obra de arte.</p>
+            </div>
+            <!-- <img src="assets/img/estacion.jpg" alt="aplicacionServicio"> -->
+        </div>
+
+
+
+
+    </section>
+
+
+    <section id="alasiado">
+        <div class="servicio-description fondo-alasiado">
+            <!-- <h1>NUESTROS SERVICIOS</h1> -->
+
+            <h1 class="title-service">Alasiado permanentes y express</h1>
+
+            <p>En <span>Distribuidora Lizz</span>, le damos a tu cabello el tratamiento que se merece. ¡Agenda tu cita
+                hoy y luce un look impecable desde la raíz hasta las puntas!.</p>
+
+            <button class="button-details-section">Agendar una cita</button>
+
+        </div>
+
+
+
+        <div class="descripcion-servicio">
+
+            <div class="texto-descripcion">
+                <p>¿Sueñas con un cabello liso, suave y manejable todos los días? ¡Hazlo realidad con nuestro exclusivo
+                    servicio de alisado!
+                    Utilizamos productos de alta calidad y técnicas especializadas que cuidan tu cabello mientras lo
+                    dejan sedoso,
+                    brillante y sin frizz por semanas.</p>
+            </div>
+            <div class="carousel-container">
+                <button class="nav prev" (click)="cambiarImagen('alasiado', 'anterior')">&#10094;</button>
+
+                <div class="carousel-image">
+                    <img [src]="imagesAlasiado[indexAlasiado]" alt="Imagen del carrusel de alasiado">
+                </div>
+
+                <button class="nav next" (click)="cambiarImagen('alasiado', 'siguiente')">&#10095;</button>
+            </div>
+            <!-- <img src="assets/img/estacion.jpg" alt="aplicacionServicio"> -->
+        </div>
+
+    </section>
+</main>
