@@ -3,6 +3,10 @@
 @use '../../../scss/mixins' as m;
 
 
+.grid4col{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
 // Cortar a un componente separado 
 .categoryDescriptionButton{
   display: flex;

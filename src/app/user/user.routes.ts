@@ -25,17 +25,21 @@ export const userRoutes: Routes = [
                                 loadComponent: () => import('./pages/kuul-page/kuul-page.component').then(m => m.KuulPageComponent),
                             },
                             {
-                                path: 'coloracionPermanente',
+                                path: 'productos-disponibles',
                                 loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
                             },
-                             {
-                                path: 'coloracionFantasia',
-                                loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
-                            },
-                             {
-                                path: 'decolorantes',
-                                loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
-                            },
+                            // {
+                            //     path: 'coloracionPermanente',
+                            //     loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
+                            // },
+                            //  {
+                            //     path: 'coloracionFantasia',
+                            //     loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
+                            // },
+                            //  {
+                            //     path: 'decolorantes',
+                            //     loadComponent: () => import('./pages/user-list-product/user-list-product.component').then(m => m.UserListProductComponent)
+                            // },
                             
                             {
                                 path: '**',

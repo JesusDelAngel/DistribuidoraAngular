@@ -1,36 +1,7 @@
 <div class="categoryDescriptionButton">
-    <app-title-description [subtitle]="'KÜÜL COLOR SYSTEM'" [title]="'COLORACIÓN PERMANENTE'"></app-title-description>
-</div>
-<div class="grid">
-
-
-    <div class="item1">
-        <img src="https://www.shutterstock.com/image-photo/young-woman-long-black-hair-600nw-2484452461.jpg" alt="">
-    </div>
-
-
-    <div class="item2">
-        <h1 class="title">MODO DE USO</h1>
-        <p class="description">
-            Una vez seleccionado el tinte y peróxido apropiado, en un recipiente no metálico vacía el tubo de Küül Color
-            System y agrega el peróxido. La fórmula es 1 + 1 1⁄2. 90 ml de tinte + 135 ml de peróxido. Debes de
-            aplicarlo con brocha y cabello seco.
-
-            Cabello virgen: aplica de medios a puntas y espera 20 minutos. Después aplica en la raíz y espera 30 minutos
-            más. Enjuaga sólo con agua.
-
-            Retoque: aplique la mezcla en el crecimiento del cabello y déjalo por 20 minutos, después aplica en el resto
-            del cabello y deja reposar por 10 minutos más. Enjuaga sólo con agua.</p>
-    </div>
+    <app-title-description [title]="'PRODUCTOS DISPONIBLES'"></app-title-description>
 </div>
 
-<div class="gridProducts">
-
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
-    <app-product-description></app-product-description>
+<div class="grid4col">
+    <app-product-description  [productos] = "allproducts"></app-product-description>
 </div>

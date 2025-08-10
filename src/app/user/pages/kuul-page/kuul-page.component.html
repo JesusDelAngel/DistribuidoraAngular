@@ -5,24 +5,26 @@
         daña el cabello, descubre los tonos permanentes o fantasía que tenemos para ti.</p>
 
     <div class="categoryDescriptionButton">
-        <app-title-description [subtitle]="'KÜÜL COLOR SYSTEM'"
-            [title]="'COLORACIÓN PERMANENTE'"></app-title-description>
-        <app-button [routerLink]="['coloracionFantasia']" [name]="'Ver todo'"></app-button>
+        <app-title-description [subtitle]="'KÜÜL COLOR SYSTEM'" [title]="'COLORACIÓN PERMANENTE'"></app-title-description>
+        <!-- [routerLink]="['productos-disponibles']" -->
+        <app-button  (click)="cargarProductos('permanentes')" [name]="'Ver todo'"></app-button>
     </div>
 
     <div class="scroll-container">
-        <app-product-description  [productos] = "productos"></app-product-description>
+        <app-product-description [productos]="productos"></app-product-description>
     </div>
 
     <div class="categoryDescriptionButton">
         <app-title-description [subtitle]="'FUNNY COLORS'" [title]="'COLORACIÓN FANTASÍA'"></app-title-description>
-        <app-button [routerLink]="['coloracionFantasia']" [name]="'Ver todo'"></app-button>
+        <app-button (click)="cargarProductos('fantasia')" [name]="'Ver todo'"></app-button>
+<!-- [routerLink]="['productos-disponibles']"  -->
+        <!-- <app-button [routerLink]="['coloracionFantasia']" [name]="'Ver todo'"></app-button> -->
     </div>
 
     <div class="scroll-container">
-        <app-product-description  [productos] = "productosFantasia"></app-product-description>
+        <app-product-description [productos]="productosFantasia"></app-product-description>
     </div>
-<!-- 
+    <!-- 
     <div class="categoryDescriptionButton">
         <app-title-description [subtitle]="'BLEACH ME'" [title]="'DECOLORACIÓN PERFECTA'"></app-title-description>
         <app-button [name]="'Ver todo'"></app-button>

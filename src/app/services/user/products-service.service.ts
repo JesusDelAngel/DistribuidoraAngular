@@ -11,6 +11,13 @@ export class ProductsServiceService {
   private apiUrl = 'http://localhost:3000/productos'
   constructor(private http: HttpClient) { }
 
+
+getProductosByCategory(tipo: string): Observable<any[]>{
+  const url=`http://localhost:3000/productos/${tipo}`;
+  return this.http.get<any[]>(url);
+}
+
+
   obtenerProductos(): Observable<product[]>{
     return this.http.get<product[]>(this.apiUrl + '/permanentes');
   }
@@ -20,6 +27,9 @@ export class ProductsServiceService {
     return this.http.get<product[]>(this.apiUrl + '/fantasia');
   }
 }
+
+
+
 
 
 

@@ -8,13 +8,14 @@
     gap: 1rem;
     scroll-snap-type: x mandatory;
     overflow-x: auto;
-    // padding: 1rem;
     scroll-behavior: smooth;
     scrollbar-width: none;
-
+    
     padding-left: 1rem;
     padding-right: 1rem;
-
+    
+    // padding: 1rem;
+    
     // // Opcional (mejora visual)
     // scroll-behavior: smooth;
     // scrollbar-width: none; // para Firefox
@@ -30,7 +31,7 @@
 
     width: 25rem;
     height: 40rem;
-    background: linear-gradient(135deg, v.$ceramic, v.$morado);
+    background: linear-gradient(135deg, v.$ceramic, v.$blanco);
     border-radius: 2rem;
     overflow: visible;
     margin: 1rem;
